@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23060606'/><text x='50' y='71' font-size='56' text-anchor='middle' font-family='Georgia,serif' fill='%23ece9e2'>J</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jenwin — UI/UX Designer based in the Philippines" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#060606" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f0eee8" />
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inconsolata-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cinzel-var.woff2" as="font" type="font/woff2" crossorigin />
+    <title>Jenwin | UI/UX Designer</title>
+    <script>
+      // Set theme before first paint to avoid a flash of the wrong theme
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio-theme");
+          var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+          var theme = saved || (prefersLight ? "light" : "dark");
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
